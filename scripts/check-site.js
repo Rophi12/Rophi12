@@ -7,6 +7,7 @@ const required = [
   'dist/register/index.html',
   'dist/admin/index.html',
   'dist/.nojekyll',
+  'dist/_redirects',
   'dist/assets/styles.css',
   'dist/assets/app.js',
   'dist/assets/logo.svg'
@@ -38,6 +39,15 @@ for (const page of authPages) {
   const netlifyPasswordForm = /<form[^>]*data-netlify[^>]*>[\s\S]*?<input[^>]*type=["']password["'][^>]*>/i.test(html);
   if (netlifyPasswordForm) {
     console.error(`${page} contains a Netlify form with password fields.`);
+    process.exit(1);
+  }
+}
+
+
+const redirects = readFileSync(join(process.cwd(), 'dist/_redirects'), 'utf8');
+for (const route of ['/login', '/register', '/admin', '/*']) {
+  if (!redirects.includes(route)) {
+    console.error(`dist/_redirects is missing the Netlify route ${route}.`);
     process.exit(1);
   }
 }

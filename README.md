@@ -25,7 +25,8 @@ The admin page is a static preview that works on GitHub Pages without a server. 
 1. Import this repository into Netlify.
 2. Keep the build command as `npm run build`.
 3. Keep the publish directory as `dist`.
-4. Replace the placeholder WhatsApp, Telegram, admin, and authentication form handling with your real production services. Do not enable Netlify Forms for login, registration, OTP, admin, or password-reset forms because those flows can contain credentials or security codes.
+4. If you deploy by dragging and dropping files into Netlify, upload the generated `dist` folder so Netlify receives the included `_redirects` file. This keeps `/login`, `/register`, `/admin`, and refresh/deep-link routes from showing Netlify's page-not-found screen.
+5. Replace the placeholder WhatsApp, Telegram, admin, and authentication form handling with your real production services. Do not enable Netlify Forms for login, registration, OTP, admin, or password-reset forms because those flows can contain credentials or security codes.
 
 ## Local commands
 
