@@ -1,0 +1,9 @@
+# Netlify routing for drag-and-drop or dist-only deploys.
+# Keep extensionless page URLs working and serve the home page for unknown routes.
+/login    /login/    301!
+/register /register/ 301!
+/admin    /admin/    301!
+/login/*    /login/index.html    200
+/register/* /register/index.html 200
+/admin/*    /admin/index.html    200
+/* /index.html 200

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Create your Toppily agent account." />
+    <title>Register - Toppily</title>
+    <link rel="icon" href="../assets/logo.svg" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <script defer src="../assets/app.js"></script>
+  </head>
+  <body class="auth-page">
+    <main class="auth-card wide">
+      <div class="auth-header">
+        <a href="../index.html"><img src="../assets/logo.svg" alt="Toppily Logo" /></a>
+        <h1>Create Your Account</h1>
+        <p>Join Toppily and start managing your data packages</p>
+      </div>
+
+      <form name="register" method="post" data-enhanced="register" data-loading="Creating Account..." data-success="Account request saved. Ask the admin to approve it, then return to the login page.">
+        <div class="alert" data-alert role="status"></div>
+        <div class="form-grid">
+          <div class="field">
+            <label for="firstName">First Name</label>
+            <input id="firstName" name="firstName" autocomplete="given-name" required />
+            <span class="help">Minimum 3 letters. Cannot be your username.</span>
+          </div>
+          <div class="field">
+            <label for="lastName">Last Name</label>
+            <input id="lastName" name="lastName" autocomplete="family-name" required />
+            <span class="help">Minimum 3 letters. Cannot be your username.</span>
+          </div>
+          <div class="field full">
+            <label for="username">Username</label>
+            <input id="username" name="username" autocomplete="username" required />
+            <span class="help">Requirements: 4-15 characters • Lowercase letters only • Maximum 4 digits • No spaces • Cannot be your first or last name</span>
+          </div>
+          <div class="field">
+            <label for="email">Email Address</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="field">
+            <label for="phone">Phone Number</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+          </div>
+          <div class="field">
+            <label for="businessName">Business Name (Optional)</label>
+            <input id="businessName" name="businessName" autocomplete="organization" />
+          </div>
+          <div class="field">
+            <label for="whatsapp">WhatsApp Number (Optional)</label>
+            <input id="whatsapp" name="whatsapp" type="tel" />
+          </div>
+          <div class="field full">
+            <label for="referral">Referral Code (Optional)</label>
+            <input id="referral" name="referral" />
+            <span class="help">Have a referral code? Enter it here to get started with bonuses!</span>
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" autocomplete="new-password" required />
+          </div>
+          <div class="field">
+            <label for="confirmPassword">Confirm Password</label>
+            <input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" required />
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit">Create Account</button>
+        </div>
+      </form>
+
+      <div class="auth-links">
+        <span>Already have an account? <a href="../login/index.html">Sign in here</a></span>
+        <span>Join our community page <a href="https://wa.me/2340000000000" rel="noopener">Click Here!</a></span>
+        <a href="../index.html">Back to Home</a>
+      </div>
+    </main>
+  </body>
+</html>
