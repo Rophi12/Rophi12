@@ -395,3 +395,238 @@ input:focus {
   .hero-card { min-height: 350px; }
   .form-grid { grid-template-columns: 1fr; }
 }
+
+button.secondary {
+  background: #fff;
+  color: var(--green-dark);
+  border: 1px solid rgba(16, 169, 111, 0.24);
+  box-shadow: none;
+}
+
+button.danger {
+  background: #fff3f3;
+  color: var(--danger);
+  border: 1px solid rgba(216, 58, 58, 0.24);
+  box-shadow: none;
+}
+
+.alert[data-tone="danger"] {
+  background: #fff3f3;
+  border-color: rgba(216, 58, 58, 0.25);
+  color: var(--danger);
+}
+
+.admin-shell {
+  padding: clamp(1.2rem, 4vw, 4.5rem);
+}
+
+.admin-hero {
+  max-width: 860px;
+  margin-bottom: 2rem;
+}
+
+.admin-hero h1 {
+  font-size: clamp(2.4rem, 6vw, 4.8rem);
+}
+
+.admin-login {
+  margin-inline: auto;
+}
+
+.security-note {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  text-align: center;
+}
+
+.admin-dashboard[hidden],
+.admin-login[hidden] {
+  display: none;
+}
+
+.admin-dashboard {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.admin-toolbar,
+.admin-panel,
+.admin-stats article {
+  border: 1px solid rgba(16, 169, 111, 0.14);
+  background: var(--card);
+  box-shadow: 0 16px 50px rgba(20, 63, 43, 0.08);
+}
+
+.admin-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.4rem;
+  border-radius: 1.4rem;
+}
+
+.admin-toolbar .eyebrow,
+.admin-toolbar h2 {
+  margin-bottom: 0;
+}
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.admin-stats article {
+  padding: 1.2rem;
+  border-radius: 1.2rem;
+}
+
+.admin-stats span {
+  display: block;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.admin-stats strong {
+  display: block;
+  margin-top: 0.4rem;
+  color: var(--green-dark);
+  font-size: 2.2rem;
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(320px, 0.8fr);
+  gap: 1.2rem;
+  align-items: start;
+}
+
+.admin-panel {
+  padding: 1.3rem;
+  border-radius: 1.4rem;
+}
+
+.panel-heading p {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.admin-list,
+.feature-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.admin-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: #fff;
+}
+
+.admin-item h3,
+.admin-item p {
+  margin-bottom: 0.35rem;
+}
+
+.admin-item p,
+.admin-item small {
+  color: var(--muted);
+}
+
+.admin-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.admin-actions button {
+  min-height: 38px;
+  padding: 0.55rem 0.85rem;
+  font-size: 0.9rem;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.4rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: #fff8e6;
+  color: #9a6500;
+  font-size: 0.76rem;
+  letter-spacing: 0;
+  text-transform: capitalize;
+}
+
+.status-pill.approved {
+  background: var(--green-soft);
+  color: var(--green-dark);
+}
+
+.status-pill.suspended {
+  background: #fff3f3;
+  color: var(--danger);
+}
+
+.feature-toggle {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.8rem;
+  align-items: start;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: #fff;
+  cursor: pointer;
+}
+
+.feature-toggle input {
+  width: 1.2rem;
+  min-height: 1.2rem;
+  margin-top: 0.2rem;
+  accent-color: var(--green-dark);
+}
+
+.feature-toggle strong,
+.feature-toggle small {
+  display: block;
+}
+
+.feature-toggle small {
+  margin-top: 0.2rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.empty-state {
+  margin: 0;
+  padding: 1rem;
+  border: 1px dashed #b8d5c4;
+  border-radius: 1rem;
+  color: var(--muted);
+  background: #fbfffd;
+}
+
+@media (max-width: 980px) {
+  .admin-grid,
+  .admin-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-item {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-actions {
+    justify-content: flex-start;
+  }
+}
