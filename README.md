@@ -1,6 +1,6 @@
 # Toppily Agent Portal
 
-A Netlify-ready static website inspired by the public pages at `agent.toppily.com`. It includes a home page, login page, registration page, responsive styling, simple client-side form feedback, and Netlify Forms attributes that can be connected to a real backend later.
+A Netlify-ready static website inspired by the public pages at `agent.toppily.com`. It includes a home page, login page, registration page, responsive styling, simple client-side form feedback, and auth forms that are intentionally left for a secure backend integration instead of Netlify Forms.
 
 ## Pages
 
@@ -13,7 +13,7 @@ A Netlify-ready static website inspired by the public pages at `agent.toppily.co
 1. Import this repository into Netlify.
 2. Keep the build command as `npm run build`.
 3. Keep the publish directory as `dist`.
-4. Replace the placeholder WhatsApp, Telegram, and authentication/form handling endpoints with your real production services.
+4. Replace the placeholder WhatsApp, Telegram, and authentication form handling with your real production services. Do not enable Netlify Forms for login, registration, OTP, or password-reset forms because those flows can contain credentials or security codes.
 
 ## Local commands
 

@@ -44,7 +44,7 @@ document.querySelectorAll('form[data-enhanced]').forEach((form) => {
     }
 
     setButtonLoading(button, form.dataset.loading || 'Processing...');
-    showAlert(form, form.dataset.success || 'Thanks! Your request is ready to send. Connect this form to your backend or Netlify Forms for production.');
+    showAlert(form, form.dataset.success || 'Thanks! Your request is ready to send. Connect this form to your secure backend for production.');
   });
 });
 
