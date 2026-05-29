@@ -11,7 +11,7 @@ A GitHub Pages and Netlify-ready static website inspired by the public pages at 
 
 ## Admin portal
 
-The admin page is a static preview that works on GitHub Pages without a server. Sign in with the configured admin email and password, then approve, suspend, or delete demo registrations and toggle feature flags. The password is checked from a client-side SHA-256 digest rather than stored as plaintext, but this is still not production authentication. Connect a server-side auth and database layer before managing real users.
+The admin page is a static preview that works on GitHub Pages without a server. Sign in with the configured admin email and password, then approve, suspend, or delete demo registrations and toggle feature flags. New users created from the sign-up page are saved in browser `localStorage` with a password hash, and approved users can sign in from the login page in that same browser. The admin password is checked from a client-side SHA-256 digest rather than stored as plaintext, but this is still not production authentication. Connect a server-side auth and database layer before managing real users.
 
 ## Deploy to GitHub Pages
 

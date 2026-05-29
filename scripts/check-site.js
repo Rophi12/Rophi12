@@ -74,4 +74,13 @@ if (/ADMIN_PASSWORD\s*=/.test(app)) {
   process.exit(1);
 }
 
+
+for (const snippet of ['const loginUser = async', 'const registerUser = async', 'passwordHash: await digest']) {
+  if (!app.includes(snippet)) {
+    console.error(`Built app.js is missing working auth behavior: ${snippet}`);
+    process.exit(1);
+  }
+}
+
+
 console.log('Static site checks passed.');
