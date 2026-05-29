@@ -28,6 +28,22 @@ for (const page of pages) {
   }
 }
 
+const linkExpectations = {
+  'dist/index.html': ['login/index.html', 'register/index.html', 'admin/index.html'],
+  'dist/login/index.html': ['../index.html', '../register/index.html'],
+  'dist/register/index.html': ['../index.html', '../login/index.html'],
+  'dist/admin/index.html': ['../index.html', '../login/index.html', '../register/index.html']
+};
+for (const [page, links] of Object.entries(linkExpectations)) {
+  const html = readFileSync(join(process.cwd(), page), 'utf8');
+  for (const link of links) {
+    if (!html.includes(`href="${link}"`)) {
+      console.error(`${page} is missing a static-host-safe link to ${link}.`);
+      process.exit(1);
+    }
+  }
+}
+
 const authPages = ['dist/login/index.html', 'dist/register/index.html', 'dist/admin/index.html'];
 for (const page of authPages) {
   const html = readFileSync(join(process.cwd(), page), 'utf8');

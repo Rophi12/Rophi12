@@ -5,9 +5,9 @@ A GitHub Pages and Netlify-ready static website inspired by the public pages at 
 ## Pages
 
 - `/` — landing page with navigation, hero section, features, and call-to-action.
-- `/login/` — sign-in form with password reset modal forms.
-- `/register/` — account creation form with field guidance and validation. Demo registrations are stored in browser `localStorage` for the admin preview.
-- `/admin/` — static admin portal for reviewing demo users and toggling feature availability.
+- `/login/` or `/login/index.html` — sign-in form with password reset modal forms.
+- `/register/` or `/register/index.html` — account creation form with field guidance and validation. Demo registrations are stored in browser `localStorage` for the admin preview.
+- `/admin/` or `/admin/index.html` — static admin portal for reviewing demo users and toggling feature availability.
 
 ## Admin portal
 
@@ -25,7 +25,7 @@ The admin page is a static preview that works on GitHub Pages without a server. 
 1. Import this repository into Netlify.
 2. Keep the build command as `npm run build`.
 3. Keep the publish directory as `dist`.
-4. If you deploy by dragging and dropping files into Netlify, upload the generated `dist` folder so Netlify receives the included `_redirects` file. This keeps `/login`, `/register`, `/admin`, and refresh/deep-link routes from showing Netlify's page-not-found screen.
+4. If you deploy by dragging and dropping files into Netlify, upload the generated `dist` folder so Netlify receives the included `_redirects` file. The navigation also points to explicit `index.html` files, so `/login/index.html`, `/register/index.html`, and `/admin/index.html` open even on hosts that do not support pretty directory URLs.
 5. Replace the placeholder WhatsApp, Telegram, admin, and authentication form handling with your real production services. Do not enable Netlify Forms for login, registration, OTP, admin, or password-reset forms because those flows can contain credentials or security codes.
 
 ## Local commands
