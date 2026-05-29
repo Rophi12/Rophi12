@@ -1,0 +1,9 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Toppily-style network logo</title>
+  <desc id="desc">A green circular mark with signal bars and a T letter.</desc>
+  <circle cx="60" cy="60" r="56" fill="#0ba66d"/>
+  <circle cx="60" cy="60" r="44" fill="#ffffff" fill-opacity="0.14"/>
+  <path d="M31 38h58v13H67v35H53V51H31V38Z" fill="white"/>
+  <path d="M80 79c5.8-5.3 9-12.3 9-19.7 0-7.5-3.2-14.4-9-19.7" stroke="white" stroke-width="7" stroke-linecap="round" opacity="0.92"/>
+  <path d="M91 91c9-8.2 14-19.5 14-31.7S100 35.8 91 27.6" stroke="white" stroke-width="6" stroke-linecap="round" opacity="0.7"/>
+</svg>

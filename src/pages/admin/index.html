@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Admin portal for managing Toppily users and feature availability." />
+    <title>Admin Portal - Toppily</title>
+    <link rel="icon" href="../assets/logo.svg" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <script defer src="../assets/app.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="Toppily home">
+        <img src="../assets/logo.svg" alt="Toppily Logo" />
+        <span>Toppily</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="../index.html">Home</a>
+        <a href="../login/index.html">Login</a>
+        <a href="../register/index.html">Register</a>
+        <a class="active" href="index.html">Admin</a>
+      </nav>
+    </header>
+
+    <main class="admin-shell" data-admin-app>
+      <section class="admin-hero">
+        <span class="eyebrow">Admin control center</span>
+        <h1>Manage Toppily users and features</h1>
+        <p class="lead">Review new registrations, approve or suspend agents, and switch customer-facing features on or off from a GitHub Pages-ready static dashboard.</p>
+      </section>
+
+      <section class="auth-card admin-login" data-admin-login>
+        <div class="auth-header">
+          <img src="../assets/logo.svg" alt="Toppily Logo" />
+          <h2>Admin Sign In</h2>
+          <p>Use the configured admin email <strong data-admin-email></strong>.</p>
+        </div>
+        <form data-admin-form>
+          <div class="alert" data-alert role="status"></div>
+          <div class="field">
+            <label for="email">Admin Email</label>
+            <input id="email" name="email" type="email" autocomplete="username" required />
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" required />
+          </div>
+          <button type="submit">Open Admin Portal</button>
+        </form>
+        <p class="security-note">This static portal is suitable for demos and GitHub Pages previews. Connect a server-side authentication backend before using it for real customer administration.</p>
+      </section>
+
+      <section class="admin-dashboard" data-admin-dashboard hidden>
+        <div class="admin-toolbar">
+          <div>
+            <span class="eyebrow">Signed in</span>
+            <h2>Admin Dashboard</h2>
+          </div>
+          <button type="button" class="secondary" data-admin-logout>Sign Out</button>
+        </div>
+
+        <div class="admin-stats" aria-label="Admin statistics">
+          <article><span>Total users</span><strong data-total-users>0</strong></article>
+          <article><span>Pending approvals</span><strong data-pending-users>0</strong></article>
+          <article><span>Enabled features</span><strong data-active-features>0</strong></article>
+        </div>
+
+        <div class="admin-grid">
+          <section class="admin-panel">
+            <div class="panel-heading">
+              <h2>User requests</h2>
+              <p>Approve, suspend, or remove registrations captured by the static signup flow.</p>
+            </div>
+            <div class="admin-list" data-user-list></div>
+          </section>
+
+          <section class="admin-panel">
+            <div class="panel-heading">
+              <h2>Feature controls</h2>
+              <p>Toggle features that should be available when the production backend is connected.</p>
+            </div>
+            <div class="feature-list" data-feature-list></div>
+          </section>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
